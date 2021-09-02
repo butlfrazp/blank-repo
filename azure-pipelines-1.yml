@@ -9,7 +9,10 @@ resources:
   pipelines:
     - pipeline: 'some test pipeline'
       source: 'butlfrazp.blank-repo'
-      trigger: true
+      trigger:
+        branches:
+          include:
+            - refs/heads/main
 
 pool:
   vmImage: ubuntu-latest
